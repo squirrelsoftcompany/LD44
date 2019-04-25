@@ -1,6 +1,6 @@
-# Template
+# LD44
 
-Here's a very short template of Unity3D's project.
+Here are the sources for our entries for the LD44.
 
 # Version of Unity3D
 
