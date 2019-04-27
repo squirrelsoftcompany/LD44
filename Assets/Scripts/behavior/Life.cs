@@ -12,7 +12,9 @@ namespace behavior {
     
         private void Awake() {
             animator = GetComponent<Animator>();
-            parentRobot = transform.parent.GetComponent<AllRobotParts>();
+            if (transform.parent) {
+                parentRobot = transform.parent.GetComponent<AllRobotParts>();
+            }
         }
 
         // Start is called before the first frame update
@@ -46,7 +48,13 @@ namespace behavior {
         }
 
         public void onDieAnimationFinished() {
-            parentRobot.removePart(this);
+            if (parentRobot != null) {
+                parentRobot.removePart(this);
+            } else {
+                // We are the parent, and we should die
+                gameObject.SetActive(false);
+                GetComponent<AllRobotParts>().die();
+            }
         }
     }
 }

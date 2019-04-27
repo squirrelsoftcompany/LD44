@@ -149,6 +149,7 @@ MonoBehaviour:
   - {fileID: 5758129018891305715}
   - {fileID: 5183013913323398962}
   - {fileID: 5441673682595762870}
+  dieEvent: {fileID: 11400000, guid: 29a3f22c9429a64449f06863d71f9df1, type: 2}
 --- !u!1001 &1467192905367731980
 PrefabInstance:
   m_ObjectHideFlags: 0
