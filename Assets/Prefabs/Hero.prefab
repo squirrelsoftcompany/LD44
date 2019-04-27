@@ -121,4 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b8f19f10743fb45a85e903abcfeb99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 20
+  m_forceSpeed: 20
+  m_torqueSpeed: 15
