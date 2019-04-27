@@ -73,8 +73,7 @@ public class PlayerMovement :
         float moveHorizontal = Input.GetAxis ("Horizontal");
         float moveVertical = Input.GetAxis ("Vertical");
 
-        Vector3 movement = Camera.main.transform.rotation * Quaternion.AngleAxis(-45, new Vector3(1, 0, 0))
-                            * Vector3.Normalize(new Vector3 (moveHorizontal, 0.0f, moveVertical));
+        Vector3 movement = Quaternion.AngleAxis(45, new Vector3(0, 1, 0)) * Vector3.Normalize(new Vector3 (moveHorizontal, 0.0f, moveVertical));
 
         m_rb.AddForce(movement * m_speed);
     }
