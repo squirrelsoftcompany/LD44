@@ -4,12 +4,11 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 
 /***************************************************/
 /***  THE CLASS             ************************/
 /***************************************************/
-public class SettingsManager :
+public class PlayerMovement :
     MonoBehaviour
 {
     #region Sub-classes/enum
@@ -17,13 +16,11 @@ public class SettingsManager :
     /***  SUB-CLASSES/ENUM      ************************/
     /***************************************************/
 
-    [System.Serializable]
-    public class Settings
-    {
-        public int m_testInt;
-        public float m_testFloat;
-        public string m_testString;
-    }
+    /********  PUBLIC           ************************/
+
+    /********  PROTECTED        ************************/
+
+    /********  PRIVATE          ************************/
 
     #endregion
     #region Property
@@ -39,13 +36,7 @@ public class SettingsManager :
     /***  CONSTANTS             ************************/
     /***************************************************/
 
-    public static Settings Inst
-    {
-        get
-        {
-            return m_settings;
-        }
-    }
+
 
     #endregion
     #region Attributes
@@ -53,11 +44,9 @@ public class SettingsManager :
     /***  ATTRIBUTES            ************************/
     /***************************************************/
 
+	public float m_speed;
 
-    private static Settings m_settings = null;
-
-    [SerializeField]
-    private TextAsset m_settingsFile;
+    private Rigidbody m_rb;
 
     #endregion
     #region Methods
@@ -70,18 +59,25 @@ public class SettingsManager :
     // Use this for initialization
     private void Start()
     {
-        Debug.Assert(m_settingsFile != null, "Settings file not found...");
-
-        m_settings = JsonUtility.FromJson<Settings>(m_settingsFile.text);
+        m_rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-
+        
     }
 
-    /********  OUR MESSAGES     ************************/
+    private void FixedUpdate ()
+    {
+        float moveHorizontal = Input.GetAxis ("Horizontal");
+        float moveVertical = Input.GetAxis ("Vertical");
+
+        Vector3 movement = Camera.main.transform.rotation * Quaternion.AngleAxis(-45, new Vector3(1, 0, 0))
+                            * Vector3.Normalize(new Vector3 (moveHorizontal, 0.0f, moveVertical));
+
+        m_rb.AddForce(movement * m_speed);
+    }
 
     /********  PUBLIC           ************************/
 
