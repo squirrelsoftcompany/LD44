@@ -1,3 +1,4 @@
+using behavior;
 using UnityEngine;
 
 public class Hurtful : MonoBehaviour {

@@ -24,13 +24,10 @@ namespace EventSystem {
 
         [ContextMenu("Raise Events")]
         public void OnEventRaised(GameEvent passedEvent) {
-            Debug.Log("We are onEventRaised");
             for (var i = eventAndResponses.Count - 1; i >= 0; i--) {
                 // Check if the passed event is the correct one
-                Debug.Log("Inside for loop");
                 if (passedEvent == eventAndResponses[i].gameEvent) {
                     // Uncomment the line below for debugging the event listens and other details
-                    Debug.Log("Called Event named: " + eventAndResponses[i].name + " on GameObject: " + gameObject.name);
                     eventAndResponses[i].EventRaised();
                 }
             }
