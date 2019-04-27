@@ -77,7 +77,7 @@ public class PlayerMovement :
         float moveHorizontal = Input.GetAxis ("Horizontal");
         float moveVertical = Input.GetAxis ("Vertical");
 
-        Vector3 movement = Quaternion.AngleAxis(45, new Vector3(0, 1, 0)) * new Vector3 (moveHorizontal, 0.0f, moveVertical);
+        Vector3 movement = new Vector3 (moveVertical, 0.0f, -moveHorizontal);
 
         float angle = Vector3.SignedAngle(transform.forward, movement, transform.up);
 
