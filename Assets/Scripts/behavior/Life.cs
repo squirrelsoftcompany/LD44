@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace behavior {
     public class Life : MonoBehaviour {
         [SerializeField] private float life;
         [SerializeField] private float worthMultiplier = 1f;
         [SerializeField] private float maxLife;
+        [SerializeField] private float timeOfUntouchability = 1;
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private List<AudioClip> clips;
+
+        private float untouchableTimer;
+        private Hurtful hurtful;
 
         private Animator animator;
         private static readonly int DIE = Animator.StringToHash("die");
@@ -22,9 +29,23 @@ namespace behavior {
             life = maxLife;
         }
 
+        private void Update()
+        {
+            if (untouchableTimer > 0)
+            {
+                untouchableTimer -= Time.deltaTime;
+                return;
+            }
+
+            if (hurtful) hurtful.hurtMe(this);
+        }
+
         private void OnCollisionEnter(Collision other) {
-            var hurtful = other.transform.GetComponent<Hurtful>();
-            if (hurtful != null) hurtful.hurtMe(this);
+            hurtful = other.transform.GetComponent<Hurtful>();
+        }
+
+        private void OnCollisionExit(Collision other) {
+            hurtful = null;
         }
 
         public float getMyWorth() {
@@ -32,7 +53,9 @@ namespace behavior {
         }
 
         public void lose(float hurtAmount) {
+            audioSource.PlayOneShot(clips[Random.Range(0, clips.Count)]);
             life -= hurtAmount;
+            untouchableTimer = timeOfUntouchability;
             if (life <= 0) {
                 die();
             }
