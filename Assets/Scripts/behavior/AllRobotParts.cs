@@ -17,7 +17,7 @@ namespace behavior {
         }
 
         public void addPart(Life part) {
-            part.gameObject.SetActive(transform);
+            part.gameObject.SetActive(true);
         }
 
         public void die() {

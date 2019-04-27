@@ -16,7 +16,7 @@ namespace behavior {
         private Animator animator;
         private static readonly int DIE = Animator.StringToHash("die");
         private AllRobotParts parentRobot;
-    
+
         private void Awake() {
             animator = GetComponent<Animator>();
             if (transform.parent) {
@@ -77,6 +77,13 @@ namespace behavior {
                 // We are the parent, and we should die
                 gameObject.SetActive(false);
                 GetComponent<AllRobotParts>().die();
+            }
+        }
+
+        public void bePickedUp() {
+            var allRobotParts = transform.parent.GetComponent<AllRobotParts>();
+            if (allRobotParts != null) {
+                allRobotParts.addPart(this);
             }
         }
     }
