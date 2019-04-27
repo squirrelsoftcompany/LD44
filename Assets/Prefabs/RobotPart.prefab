@@ -4911,4 +4911,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 20
   worthMultiplier: 1
-  maxLife: 0
+  maxLife: 20
