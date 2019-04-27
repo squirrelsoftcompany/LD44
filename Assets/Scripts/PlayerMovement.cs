@@ -44,7 +44,11 @@ public class PlayerMovement :
     /***  ATTRIBUTES            ************************/
     /***************************************************/
 
-	public float m_speed;
+	public float m_forceSpeed = 20;
+    public float m_torqueSpeed = 15;
+
+    private float backwardLimit = 175.0f;
+    private float forwardLimit = 5.0f;
 
     private Rigidbody m_rb;
 
@@ -73,9 +77,22 @@ public class PlayerMovement :
         float moveHorizontal = Input.GetAxis ("Horizontal");
         float moveVertical = Input.GetAxis ("Vertical");
 
-        Vector3 movement = Quaternion.AngleAxis(45, new Vector3(0, 1, 0)) * Vector3.Normalize(new Vector3 (moveHorizontal, 0.0f, moveVertical));
+        Vector3 movement = Quaternion.AngleAxis(45, new Vector3(0, 1, 0)) * new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
-        m_rb.AddForce(movement * m_speed);
+        float angle = Vector3.SignedAngle(transform.forward, movement, transform.up);
+
+        if (angle > backwardLimit || angle < -backwardLimit) // backward
+        {
+            m_rb.AddForce(-transform.forward * movement.magnitude * m_forceSpeed * 0.8f);
+        }
+        else if (angle < forwardLimit && angle > -forwardLimit) // forward
+        {
+            m_rb.AddForce(transform.forward * movement.magnitude * m_forceSpeed);
+        }
+        else // rotate
+        {
+            m_rb.AddTorque(transform.up * Mathf.Sign(angle) * m_torqueSpeed);
+        }
     }
 
     /********  PUBLIC           ************************/
