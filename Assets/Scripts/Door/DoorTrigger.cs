@@ -42,7 +42,7 @@ public class DoorTrigger :
     /***  ATTRIBUTES            ************************/
     /***************************************************/
 
-    [SerializeField] private Animator door;
+    [SerializeField] private Animator door = null;
 
     private bool done = false;
     
