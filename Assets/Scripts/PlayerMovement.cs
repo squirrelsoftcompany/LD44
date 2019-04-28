@@ -46,6 +46,7 @@ public class PlayerMovement :
 
 	public float m_forceSpeed = 20;
     public float m_torqueSpeed = 15;
+    public float m_MaxSpeed = 5;
 
     private float backwardLimit = 170.0f;
     private float forwardLimit = 5.0f;
@@ -80,7 +81,7 @@ public class PlayerMovement :
         float moveHorizontal = Input.GetAxis ("Horizontal");
         float moveVertical = Input.GetAxis ("Vertical");
 
-        Vector3 movement = new Vector3 (moveVertical, 0.0f, -moveHorizontal);
+        Vector3 movement = Vector3.Normalize(new Vector3 (moveVertical, 0.0f, -moveHorizontal));
         if (animator) {
             //TODO check if moving correctly!!!
             if (movement.sqrMagnitude > 0) {
@@ -90,7 +91,6 @@ public class PlayerMovement :
             }
         }
         
-
         float angle = Vector3.SignedAngle(transform.forward, movement, transform.up);
 
         if (angle > backwardLimit || angle < -backwardLimit) // backward
@@ -104,7 +104,10 @@ public class PlayerMovement :
         else // rotate
         {
             m_rb.AddTorque(transform.up * Mathf.Sign(angle) * m_torqueSpeed);
+            m_rb.velocity = new Vector3(0, 0, 0);
         }
+
+        m_rb.velocity = Vector3.ClampMagnitude(m_rb.velocity, m_MaxSpeed);
     }
 
     /********  PUBLIC           ************************/

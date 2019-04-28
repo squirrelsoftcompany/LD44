@@ -1217,6 +1217,21 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 7994448836878671824, guid: 66c1f378b120c1942ac917a51a23f2f4,
+        type: 3}
+      propertyPath: m_torqueSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180794406319515773, guid: 66c1f378b120c1942ac917a51a23f2f4,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180794406319515773, guid: 66c1f378b120c1942ac917a51a23f2f4,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1999153355, guid: 66c1f378b120c1942ac917a51a23f2f4, type: 3}
       propertyPath: m_fenwick
       value: 
