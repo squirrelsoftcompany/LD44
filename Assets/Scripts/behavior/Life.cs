@@ -7,9 +7,9 @@ namespace behavior {
         [SerializeField] private float worthMultiplier = 1f;
         [SerializeField] private float maxLife;
         [SerializeField] private float timeOfUntouchability = 1;
-        [SerializeField] private AudioSource audioSource;
         [SerializeField] private List<AudioClip> clips;
 
+        private AudioSource audioSource;
         private float untouchableTimer;
         private Hurtful hurtful;
 
@@ -22,6 +22,8 @@ namespace behavior {
             if (transform.parent) {
                 parentRobot = transform.parent.GetComponent<AllRobotParts>();
             }
+
+            audioSource = GetComponent<AudioSource>();
         }
 
         // Start is called before the first frame update
