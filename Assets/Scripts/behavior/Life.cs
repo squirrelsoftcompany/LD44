@@ -17,7 +17,7 @@ namespace behavior {
         private static readonly int WRONGLY_PICKED = Animator.StringToHash("wronglyPicked");
 
         private void Awake() {
-            animator = GetComponent<Animator>();
+            animator = transform.parent.GetComponent<Animator>();
             if (transform.parent) {
                 parentRobot = transform.parent.GetComponent<AllRobotParts>();
             }

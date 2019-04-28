@@ -1,14 +1,15 @@
 ﻿using behavior;
+using EventSystem;
 using UnityEngine;
 
 public class Takeable : MonoBehaviour {
-    [SerializeField] private Life lifeRobotPart;
     [SerializeField] private Life dependentOnPart;
     private Animator animator;
     private static readonly int PICKED = Animator.StringToHash("picked");
     private static readonly int WRONGLY_PICKED = Animator.StringToHash("wronglyPicked");
     private AudioSource audioSource;
     [SerializeField] private AudioClip wrongPick, pick;
+    [SerializeField] private GameEvent pickedPart;
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -26,7 +27,7 @@ public class Takeable : MonoBehaviour {
             }
         } else {
             if (audioSource != null) audioSource.clip = pick;
-            lifeRobotPart.bePickedUp();
+            pickedPart.Raise();
             // Can and will be picked up
             if (animator != null) {
                 animator.SetTrigger(PICKED);
@@ -41,7 +42,6 @@ public class Takeable : MonoBehaviour {
     }
 
     public void onPickedUpAnimationFinished() {
-        lifeRobotPart.bePickedUp();
         Destroy(gameObject);
     }
 }
