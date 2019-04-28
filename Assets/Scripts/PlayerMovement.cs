@@ -95,19 +95,23 @@ public class PlayerMovement :
 
         if (angle > backwardLimit || angle < -backwardLimit) // backward
         {
-            m_rb.AddForce(-transform.forward * movement.magnitude * m_forceSpeed * 0.8f);
+            if (m_rb.velocity.sqrMagnitude < (m_MaxSpeed * m_MaxSpeed))
+            {
+                m_rb.AddForce(-transform.forward * movement.magnitude * m_forceSpeed * 0.8f);
+            }
         }
         else if (angle < forwardLimit && angle > -forwardLimit) // forward
         {
-            m_rb.AddForce(transform.forward * movement.magnitude * m_forceSpeed);
+            if (m_rb.velocity.sqrMagnitude < (m_MaxSpeed * m_MaxSpeed))
+            {
+                m_rb.AddForce(transform.forward * movement.magnitude * m_forceSpeed);
+            }
         }
         else // rotate
         {
             m_rb.AddTorque(transform.up * Mathf.Sign(angle) * m_torqueSpeed);
             m_rb.velocity = new Vector3(0, 0, 0);
         }
-
-        m_rb.velocity = Vector3.ClampMagnitude(m_rb.velocity, m_MaxSpeed);
     }
 
     /********  PUBLIC           ************************/
