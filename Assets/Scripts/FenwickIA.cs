@@ -48,7 +48,8 @@ public class FenwickIA :
 
     private Rigidbody m_rb;
     private float m_currentForceSpeed;
-    public float m_rageTimeLeft;
+    private float m_rageTimeLeft;
+    private LayerMask layerMask;
 
     #endregion
     #region Methods
@@ -73,35 +74,29 @@ public class FenwickIA :
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = m_player.transform.position;
         
+        int l_layerMask = ~ (1 << LayerMask.NameToLayer("Enemy")) ;
+        bool l_activeRageMode = false;
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
-        Debug.DrawLine(transform.position, m_player.transform.position,Color.red);
-        if (Physics.Raycast(transform.position, m_player.transform.position, out hit, m_rangeDetection) )
+        if (Physics.Raycast(transform.position, (m_player.transform.position - transform.position), out hit, m_rangeDetection, l_layerMask) )
         {
             if (hit.transform.tag == "Player")
             {
-                Debug.Log("1");
-                m_currentForceSpeed = m_forceSpeedRage;
+                l_activeRageMode = true;
             }
-            else
-            {
-                Debug.Log("2");
-                m_rageTimeLeft -= Time.deltaTime;
-                if (m_rageTimeLeft < 0)
-                {
-                    m_currentForceSpeed = m_forceSpeed;
-                    m_rageTimeLeft = m_rageTime;
-                }
-            }
+        }
+
+        if(l_activeRageMode)
+        {
+            m_currentForceSpeed = m_forceSpeedRage;
+            m_rageTimeLeft = m_rageTime;
         }
         else
         {
-            Debug.Log("3");
             m_rageTimeLeft -= Time.deltaTime;
             if (m_rageTimeLeft < 0)
             {
                 m_currentForceSpeed = m_forceSpeed;
-                m_rageTimeLeft = m_rageTime;
             }
         }
     }
