@@ -158,6 +158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeRobotPart: {fileID: 0}
+  dependentOnPart: {fileID: 0}
+  wrongPick: {fileID: 8300000, guid: e7d359d8d475ebb4b8752ecf66bc32ea, type: 3}
+  pick: {fileID: 8300000, guid: bba6b7db2d84c5a4e9172c00cce8309a, type: 3}
 --- !u!82 &6882450933398030617
 AudioSource:
   m_ObjectHideFlags: 0

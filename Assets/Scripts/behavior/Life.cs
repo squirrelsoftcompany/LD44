@@ -16,6 +16,7 @@ namespace behavior {
         private Animator animator;
         private static readonly int DIE = Animator.StringToHash("die");
         private AllRobotParts parentRobot;
+        private static readonly int WRONGLY_PICKED = Animator.StringToHash("wronglyPicked");
 
         private void Awake() {
             animator = GetComponent<Animator>();
@@ -31,10 +32,8 @@ namespace behavior {
             life = maxLife;
         }
 
-        private void Update()
-        {
-            if (untouchableTimer > 0)
-            {
+        private void Update() {
+            if (untouchableTimer > 0) {
                 untouchableTimer -= Time.deltaTime;
                 return;
             }

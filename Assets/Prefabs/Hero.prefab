@@ -5307,7 +5307,6 @@ MonoBehaviour:
   worthMultiplier: 1
   maxLife: 20
   timeOfUntouchability: 1
-  audioSource: {fileID: 2133841252201166694}
   clips:
   - {fileID: 8300000, guid: 19b7f4de7645e6442bde881499b83871, type: 3}
   - {fileID: 8300000, guid: 700921b31919ec741ba763bc144d07a8, type: 3}
