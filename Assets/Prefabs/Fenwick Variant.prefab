@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3920835431887134619}
   - component: {fileID: 3920835431887134618}
   - component: {fileID: 3920835431887134598}
-  - component: {fileID: 4328599520289157092}
   - component: {fileID: 3920835431887134621}
   - component: {fileID: 3920835431887134623}
   - component: {fileID: 223179347}
@@ -65,7 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: d76425096b9920d498e31013078ca648, type: 2}
-  - {fileID: 2100000, guid: 41ec6c547c18a834bbb655a6a39f17ac, type: 2}
+  - {fileID: 2100000, guid: 072b9480623d38e4f91f6c2dfc6f58e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,26 +113,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &4328599520289157092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3920835431887134617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d5d88e8f4214069963acf9a12c60548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myParts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  dieEvent: {fileID: 11400000, guid: 29a3f22c9429a64449f06863d71f9df1, type: 2}
 --- !u!114 &3920835431887134621
 MonoBehaviour:
   m_ObjectHideFlags: 0
