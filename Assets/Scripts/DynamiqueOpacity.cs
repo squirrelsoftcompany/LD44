@@ -73,7 +73,6 @@ public class DynamiqueOpacity :
             Color col = transform.GetComponent<Renderer>().material.color;
             if (col != null)
             {
-                //float l_progressTime =  Mathf.Lerp(m_fadeTime, 0.0f, m_fadeTimer);
                 float l_progressTime;
                 if (m_fadeTimer > 0 )
                 {
@@ -83,10 +82,7 @@ public class DynamiqueOpacity :
                 {
                     l_progressTime = 1.0f;
                 }
-                Debug.Log("l_progressTime : " + l_progressTime);
                 col.a = Mathf.Lerp(m_initialOpacity, m_opacityGoal, l_progressTime);
-                Debug.Log(col.a);
-                //col.a = Mathf.Lerp(m_initialOpacity, m_opacityGoal, l_progressTime) * 0.01f;
                 transform.GetComponent<Renderer>().material.color = col;
             }
         }
@@ -102,7 +98,6 @@ public class DynamiqueOpacity :
                 l_col.a = m_initialOpacity;
                 transform.GetComponent<Renderer>().material.color = l_col;
             }
-
         }
         m_modifiedRequested = false;
     }
