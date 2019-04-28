@@ -37,10 +37,8 @@ namespace behavior {
 
         private void OnCollisionStay(Collision other)
         {
-            if (! touchable.Touchable) return;
-
             Hurtful hurtful = other.transform.GetComponent<Hurtful>();
-            if (hurtful) hurtful.hurtMe(this);
+            if (hurtful) lose(hurtful.HurtAmount);
         }
 
         public float getMyWorth() {
@@ -48,6 +46,8 @@ namespace behavior {
         }
 
         public void lose(float hurtAmount) {
+            if (! touchable.Touchable) return;
+            
             audioSource.PlayOneShot(clips[Random.Range(0, clips.Count)]);
             touchable.Hitted();
 
