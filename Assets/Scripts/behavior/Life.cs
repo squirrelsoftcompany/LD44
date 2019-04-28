@@ -6,14 +6,12 @@ namespace behavior {
         [SerializeField] private float life;
         [SerializeField] private float worthMultiplier = 1f;
         [SerializeField] private float maxLife;
-        [SerializeField] private float timeOfUntouchability = 1;
         [SerializeField] private List<AudioClip> clips;
 
         private AudioSource audioSource;
-        private float untouchableTimer;
-        private Hurtful hurtful;
 
         private Animator animator;
+        private Touchability touchable;
         private static readonly int DIE = Animator.StringToHash("die");
         private AllRobotParts parentRobot;
         private static readonly int WRONGLY_PICKED = Animator.StringToHash("wronglyPicked");
@@ -25,6 +23,11 @@ namespace behavior {
             }
 
             audioSource = GetComponent<AudioSource>();
+            touchable = GetComponent<Touchability>();
+            if (! touchable)
+            {
+                touchable = transform.parent.GetComponent<Touchability>();
+            }
         }
 
         // Start is called before the first frame update
@@ -32,21 +35,12 @@ namespace behavior {
             life = maxLife;
         }
 
-        private void Update() {
-            if (untouchableTimer > 0) {
-                untouchableTimer -= Time.deltaTime;
-                return;
-            }
+        private void OnCollisionStay(Collision other)
+        {
+            if (! touchable.Touchable) return;
 
+            Hurtful hurtful = other.transform.GetComponent<Hurtful>();
             if (hurtful) hurtful.hurtMe(this);
-        }
-
-        private void OnCollisionEnter(Collision other) {
-            hurtful = other.transform.GetComponent<Hurtful>();
-        }
-
-        private void OnCollisionExit(Collision other) {
-            hurtful = null;
         }
 
         public float getMyWorth() {
@@ -55,8 +49,9 @@ namespace behavior {
 
         public void lose(float hurtAmount) {
             audioSource.PlayOneShot(clips[Random.Range(0, clips.Count)]);
+            touchable.Hitted();
+
             life -= hurtAmount;
-            untouchableTimer = timeOfUntouchability;
             if (life <= 0) {
                 die();
             }
