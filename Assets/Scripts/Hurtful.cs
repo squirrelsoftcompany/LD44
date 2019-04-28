@@ -1,6 +1,7 @@
 using behavior;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class Hurtful : MonoBehaviour {
     [SerializeField] private float hurtAmount;
 
