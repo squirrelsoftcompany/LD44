@@ -51,6 +51,8 @@ public class PlayerMovement :
     private float forwardLimit = 5.0f;
 
     private Rigidbody m_rb;
+    private Animator animator;
+    private static readonly int IS_MOVING = Animator.StringToHash("isMoving");
 
     #endregion
     #region Methods
@@ -64,6 +66,7 @@ public class PlayerMovement :
     private void Start()
     {
         m_rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -78,6 +81,15 @@ public class PlayerMovement :
         float moveVertical = Input.GetAxis ("Vertical");
 
         Vector3 movement = new Vector3 (moveVertical, 0.0f, -moveHorizontal);
+        if (animator) {
+            //TODO check if moving correctly!!!
+            if (movement.sqrMagnitude > 0) {
+                animator	.SetBool	(IS_MOVING, true);
+            } else {
+                animator	.SetBool	(IS_MOVING	,false);
+            }
+        }
+        
 
         float angle = Vector3.SignedAngle(transform.forward, movement, transform.up);
 
