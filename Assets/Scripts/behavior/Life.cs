@@ -77,8 +77,8 @@ namespace behavior {
                 parentRobot.removePart(this);
             } else {
                 // We are the parent, and we should die
-                gameObject.SetActive(false);
                 GetComponent<AllRobotParts>().die();
+                gameObject.SetActive(false);
             }
         }
 
