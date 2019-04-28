@@ -47,7 +47,7 @@ public class PlayerMovement :
 	public float m_forceSpeed = 20;
     public float m_torqueSpeed = 15;
 
-    private float backwardLimit = 175.0f;
+    private float backwardLimit = 170.0f;
     private float forwardLimit = 5.0f;
 
     private Rigidbody m_rb;
