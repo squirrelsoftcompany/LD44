@@ -63,6 +63,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8929542992755478042}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 4dc8fc9174f75864782e6de353dcfba6,
+        type: 3}
+      propertyPath: m_Name
+      value: Box_20x20x40
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4dc8fc9174f75864782e6de353dcfba6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -118,15 +123,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 4dc8fc9174f75864782e6de353dcfba6,
+    - target: {fileID: 2534866581884222612, guid: 4dc8fc9174f75864782e6de353dcfba6,
         type: 3}
-      propertyPath: m_Name
-      value: Box_20x20x40
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -5975033157549033438, guid: 4dc8fc9174f75864782e6de353dcfba6,
+    - target: {fileID: 2534866581884222612, guid: 4dc8fc9174f75864782e6de353dcfba6,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc8fc9174f75864782e6de353dcfba6, type: 3}
