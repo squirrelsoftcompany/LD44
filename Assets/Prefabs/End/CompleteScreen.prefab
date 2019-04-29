@@ -291,6 +291,57 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5235474767933335171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512382746455715431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdf855a71854f4dbc45cdf67f23ff0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventAndResponses:
+  - name: On Changed value, display!
+    gameEvent: {fileID: 11400000, guid: c59515959f462744784484681cf37faf, type: 2}
+    response:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    responseForSentString:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4566095802199519293}
+          m_MethodName: SetText
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: EventSystem.ResponseWithString, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    responseForSentInt:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: EventSystem.ResponseWithInt, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    responseForSentFloat:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: EventSystem.ResponseWithFloat, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    responseForSentBool:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: EventSystem.ResponseWithBool, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!1001 &4566095801762412398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,26 +353,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Screen
-      objectReference: {fileID: 0}
-    - target: {fileID: -5975033157549033438, guid: d227b84dadb88cd4a9e96f32bc0f6513,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99612594
-      objectReference: {fileID: 0}
-    - target: {fileID: -5975033157549033438, guid: d227b84dadb88cd4a9e96f32bc0f6513,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5975033157549033438, guid: d227b84dadb88cd4a9e96f32bc0f6513,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.087938115
-      objectReference: {fileID: 0}
-    - target: {fileID: -5975033157549033438, guid: d227b84dadb88cd4a9e96f32bc0f6513,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 10.09
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d227b84dadb88cd4a9e96f32bc0f6513,
         type: 3}
@@ -378,6 +409,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5975033157549033438, guid: d227b84dadb88cd4a9e96f32bc0f6513,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99612594
+      objectReference: {fileID: 0}
+    - target: {fileID: -5975033157549033438, guid: d227b84dadb88cd4a9e96f32bc0f6513,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5975033157549033438, guid: d227b84dadb88cd4a9e96f32bc0f6513,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.087938115
+      objectReference: {fileID: 0}
+    - target: {fileID: -5975033157549033438, guid: d227b84dadb88cd4a9e96f32bc0f6513,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10.09
+      objectReference: {fileID: 0}
     - target: {fileID: -2416733968201007103, guid: d227b84dadb88cd4a9e96f32bc0f6513,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -385,6 +436,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bcaeb84f58fc53d49abfec6b29000eb3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d227b84dadb88cd4a9e96f32bc0f6513, type: 3}
+--- !u!1 &5512382746455715431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: d227b84dadb88cd4a9e96f32bc0f6513,
+    type: 3}
+  m_PrefabInstance: {fileID: 4566095801762412398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8801356650723859572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d227b84dadb88cd4a9e96f32bc0f6513,

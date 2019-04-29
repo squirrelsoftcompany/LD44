@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using EventSystem;
 
 namespace behavior {
     public class Life : MonoBehaviour {
@@ -7,6 +8,7 @@ namespace behavior {
         [SerializeField] private float worthMultiplier = 1f;
         [SerializeField] private float maxLife;
         [SerializeField] private List<AudioClip> clips;
+        [SerializeField] private GameEvent changeLife;
 
         private AudioSource audioSource;
 
@@ -33,6 +35,7 @@ namespace behavior {
         // Start is called before the first frame update
         private void Start() {
             life = maxLife;
+            changeLife.Raise();
         }
 
         private void OnCollisionStay(Collision other) {
@@ -54,6 +57,8 @@ namespace behavior {
             if (life <= 0) {
                 die();
             }
+
+            changeLife.Raise();
         }
 
         public void die() {

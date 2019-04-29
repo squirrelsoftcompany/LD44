@@ -7,6 +7,7 @@ namespace behavior {
     public class AllRobotParts : MonoBehaviour {
         [SerializeField] private List<Life> myParts;
         [SerializeField] private GameEvent dieEvent;
+        [SerializeField] private GameEvent changeValue;
 
         private void Start() {
             var touchable = GetComponent<Touchability>();
@@ -18,12 +19,16 @@ namespace behavior {
             });
             GetComponent<Life>().touchability = touchable;
             GetComponent<Life>().animator = GetComponent<Animator>();
+        }
 
+        public void onChangeLife() {
+            changeValue.sentString = getMyWorth().ToString();
+            changeValue.Raise();
         }
 
         public float getMyWorth() {
             return myParts.Where(life => life.gameObject.activeSelf)
-                .Sum(lifePart => lifePart.getMyWorth());
+                       .Sum(lifePart => lifePart.getMyWorth()) + GetComponent<Life>().getMyWorth();
         }
 
         public void removePart(Life life) {
