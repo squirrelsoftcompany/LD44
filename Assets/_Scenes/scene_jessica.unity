@@ -3289,11 +3289,6 @@ PrefabInstance:
       propertyPath: m_fenwick
       value: 
       objectReference: {fileID: 1338408689}
-    - target: {fileID: 2744417796163641562, guid: 66c1f378b120c1942ac917a51a23f2f4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c1f378b120c1942ac917a51a23f2f4, type: 3}
 --- !u!1 &1845810491
@@ -3707,6 +3702,26 @@ PrefabInstance:
       propertyPath: dependentOnPart
       value: 
       objectReference: {fileID: 1429443191}
+    - target: {fileID: 7837991038191265046, guid: 970d449325dfd6e43ac613ef60b30024,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837991038191265046, guid: 970d449325dfd6e43ac613ef60b30024,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837991038191265046, guid: 970d449325dfd6e43ac613ef60b30024,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837991038191265046, guid: 970d449325dfd6e43ac613ef60b30024,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 970d449325dfd6e43ac613ef60b30024, type: 3}
 --- !u!1001 &5331343353281103686
