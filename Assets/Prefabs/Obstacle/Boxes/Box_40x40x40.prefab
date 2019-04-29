@@ -51,25 +51,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5680165396509005592}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: f3d500be52cae474999e0535cfa1bab8,
-        type: 3}
-      propertyPath: m_Name
-      value: Box_40x40x40
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f3d500be52cae474999e0535cfa1bab8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.914566
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f3d500be52cae474999e0535cfa1bab8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.46891
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f3d500be52cae474999e0535cfa1bab8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.25007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f3d500be52cae474999e0535cfa1bab8,
         type: 3}
@@ -110,6 +105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f3d500be52cae474999e0535cfa1bab8,
+        type: 3}
+      propertyPath: m_Name
+      value: Box_40x40x40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d500be52cae474999e0535cfa1bab8, type: 3}
