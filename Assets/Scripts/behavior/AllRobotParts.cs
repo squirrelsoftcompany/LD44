@@ -22,8 +22,10 @@ namespace behavior {
         }
 
         public void onChangeLife() {
-            changeValue.sentString = getMyWorth().ToString();
+            var myWorth = getMyWorth();
+            changeValue.sentString = myWorth.ToString();
             changeValue.Raise();
+            dieEvent.sentFloat = myWorth;
         }
 
         public float getMyWorth() {
@@ -40,6 +42,7 @@ namespace behavior {
         }
 
         public void die() {
+            dieEvent.sentBool = false;
             dieEvent.Raise();
         }
     }
