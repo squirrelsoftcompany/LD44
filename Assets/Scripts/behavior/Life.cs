@@ -35,8 +35,7 @@ namespace behavior {
             life = maxLife;
         }
 
-        private void OnCollisionStay(Collision other)
-        {
+        private void OnCollisionStay(Collision other) {
             Hurtful hurtful = other.transform.GetComponent<Hurtful>();
             if (hurtful) lose(hurtful.HurtAmount);
         }
@@ -46,8 +45,8 @@ namespace behavior {
         }
 
         public void lose(float hurtAmount) {
-            if (! touchability.Touchable) return;
-            
+            if (!touchability.Touchable) return;
+
             audioSource.PlayOneShot(clips[Random.Range(0, clips.Count)]);
             touchability.Hitted();
 
@@ -61,12 +60,14 @@ namespace behavior {
             // die a magnificent death, then be destroyed
             if (animator != null) {
                 animator.SetTrigger(DIE);
+                Invoke(nameof(onDieAnimationFinished), 1f);
             } else {
                 onDieAnimationFinished();
             }
         }
 
-        public void onDieAnimationFinished() {
+
+        private void onDieAnimationFinished() {
             if (parentRobot != null) {
                 parentRobot.removePart(this);
             } else {
