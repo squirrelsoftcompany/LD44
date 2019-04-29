@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fenwick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3920835431887134617, guid: d1bf8439d8918f444b5a05bb0a47e8d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3920835431887134597, guid: d1bf8439d8918f444b5a05bb0a47e8d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -318,7 +323,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -476,20 +481,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero
       objectReference: {fileID: 0}
-    - target: {fileID: 7272440476593738857, guid: 66c1f378b120c1942ac917a51a23f2f4,
+    - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
-        type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.425
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
@@ -504,17 +504,17 @@ PrefabInstance:
     - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9598052
       objectReference: {fileID: 0}
     - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.28066704
       objectReference: {fileID: 0}
     - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
@@ -529,29 +529,42 @@ PrefabInstance:
     - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -507.4
       objectReference: {fileID: 0}
     - target: {fileID: 7272440476593738869, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8304029581435771560, guid: 66c1f378b120c1942ac917a51a23f2f4,
+    - target: {fileID: 7180794406319515773, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_ConnectedAnchor.x
+      value: -1.6000004
       objectReference: {fileID: 0}
-    - target: {fileID: 2747921018242326851, guid: 66c1f378b120c1942ac917a51a23f2f4,
+    - target: {fileID: 7180794406319515773, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -2432090755550338912, guid: 2f10399f7db36ec4fa987eee69df3980,
+      propertyPath: m_ConnectedAnchor.z
+      value: -1.6000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846269794528049043, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
-    - target: {fileID: 7254547699412129823, guid: 66c1f378b120c1942ac917a51a23f2f4,
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846269794528049043, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -2432090755550338912, guid: 40153bab6a02f1b43825684cb1bf3a93,
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846269794528049043, guid: 66c1f378b120c1942ac917a51a23f2f4,
         type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846269794528049043, guid: 66c1f378b120c1942ac917a51a23f2f4,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[3]
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c1f378b120c1942ac917a51a23f2f4, type: 3}
