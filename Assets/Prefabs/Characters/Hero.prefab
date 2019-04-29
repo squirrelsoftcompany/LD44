@@ -5579,6 +5579,7 @@ MonoBehaviour:
   - {fileID: 644732030156792997}
   dieEvent: {fileID: 11400000, guid: 29a3f22c9429a64449f06863d71f9df1, type: 2}
   changeValue: {fileID: 11400000, guid: c59515959f462744784484681cf37faf, type: 2}
+  openEndDoor: {fileID: 11400000, guid: c38c4acc5aada1b43b6a6c884daf25ce, type: 2}
 --- !u!153 &7180794406319515773
 ConfigurableJoint:
   m_ObjectHideFlags: 0

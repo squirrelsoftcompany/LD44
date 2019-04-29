@@ -8,6 +8,7 @@ namespace behavior {
         [SerializeField] private List<Life> myParts;
         [SerializeField] private GameEvent dieEvent;
         [SerializeField] private GameEvent changeValue;
+        [SerializeField] private GameEvent openEndDoor;
 
         private void Start() {
             var touchable = GetComponent<Touchability>();
@@ -23,7 +24,7 @@ namespace behavior {
 
         public void onChangeLife() {
             var myWorth = getMyWorth();
-            changeValue.sentString = myWorth.ToString();
+            changeValue.sentString = myWorth + " €";
             changeValue.Raise();
             dieEvent.sentFloat = myWorth;
         }
@@ -38,6 +39,7 @@ namespace behavior {
         }
 
         public void addPart(Life part) {
+            openEndDoor.Raise();
             part.gameObject.SetActive(true);
         }
 

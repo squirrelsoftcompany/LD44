@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using EventSystem;
+﻿using EventSystem;
 using UnityEngine;
 
 public class ArchEnd : MonoBehaviour {

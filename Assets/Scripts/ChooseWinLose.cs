@@ -14,7 +14,7 @@ public class ChooseWinLose : MonoBehaviour {
     // Start is called before the first frame update
     private void Start() {
         if (endGame.sentBool) {
-            valueText.text = endGame.sentFloat.ToString();
+            valueText.text = endGame.sentFloat + " €";
             winPanel.SetActive(true);
             losePanel.SetActive(false);
         } else {
