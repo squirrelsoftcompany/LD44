@@ -90,9 +90,10 @@ public class ApertureView :
         Debug.DrawLine(p_source, p_destination,Color.red);
         foreach (RaycastHit l_hit in hits)
         {
-            if(l_hit.transform.gameObject.GetComponent<DynamiqueOpacity>())
+            DynamiqueOpacity[] l_scriptArray = l_hit.transform.gameObject.GetComponentsInChildren<DynamiqueOpacity>();
+            foreach (DynamiqueOpacity l_script in l_scriptArray)
             {
-                l_hit.transform.gameObject.GetComponent<DynamiqueOpacity>().FadeOutOpacity(0.5f, 0.5f);
+                l_script.FadeOutOpacity(0.5f, 0.5f);
             }
         }
     }
