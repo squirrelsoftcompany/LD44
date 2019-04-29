@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6385746020440127733}
   - component: {fileID: 3578178235442627693}
   - component: {fileID: 6291308578239114057}
+  - component: {fileID: 6246736111521410398}
   m_Layer: 0
   m_Name: Trigger End Game
   m_TagString: Untagged
@@ -58,6 +59,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dieEvent: {fileID: 11400000, guid: 29a3f22c9429a64449f06863d71f9df1, type: 2}
+  animatorDoor: {fileID: 8546283394464381316}
+--- !u!114 &6246736111521410398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158448743855108197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdf855a71854f4dbc45cdf67f23ff0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventAndResponses:
+  - name: On open door, do open door
+    gameEvent: {fileID: 11400000, guid: c38c4acc5aada1b43b6a6c884daf25ce, type: 2}
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6291308578239114057}
+          m_MethodName: openDoor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    responseForSentString:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: EventSystem.ResponseWithString, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    responseForSentInt:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: EventSystem.ResponseWithInt, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    responseForSentFloat:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: EventSystem.ResponseWithFloat, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    responseForSentBool:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: EventSystem.ResponseWithBool, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!1 &4566095802199519295
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +301,7 @@ Transform:
   - {fileID: 8801356652293715638}
   - {fileID: 8801356650723859572}
   - {fileID: 6385746020440127733}
+  - {fileID: 5408864992788129074}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -401,6 +455,87 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: EventSystem.ResponseWithBool, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+--- !u!1001 &590456343260107632
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4566095802284633958}
+    m_Modifications:
+    - target: {fileID: 4083084922104161675, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88920f8d0fb11db47a5682830ff47f26, type: 3}
+--- !u!4 &5408864992788129074 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4837322193074107970, guid: 88920f8d0fb11db47a5682830ff47f26,
+    type: 3}
+  m_PrefabInstance: {fileID: 590456343260107632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8546283394464381316 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9127608550808054516, guid: 88920f8d0fb11db47a5682830ff47f26,
+    type: 3}
+  m_PrefabInstance: {fileID: 590456343260107632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4566095801762412398
 PrefabInstance:
   m_ObjectHideFlags: 0
