@@ -14,6 +14,7 @@ namespace behavior {
             myParts.ForEach(part => {
                 part.touchability = touchable;
                 part.animator = part.transform.parent.GetComponent<Animator>();
+                part.parentRobot = this;
             });
             GetComponent<Life>().touchability = touchable;
             GetComponent<Life>().animator = GetComponent<Animator>();

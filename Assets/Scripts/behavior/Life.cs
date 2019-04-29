@@ -12,15 +12,15 @@ namespace behavior {
 
         public Animator animator { private get; set; }
         private static readonly int DIE = Animator.StringToHash("die");
-        private AllRobotParts parentRobot;
+        public AllRobotParts parentRobot { get; set; }
         private static readonly int WRONGLY_PICKED = Animator.StringToHash("wronglyPicked");
 
         public Touchability touchability { private get; set; }
 
         private void Awake() {
-            if (transform.parent) {
-                parentRobot = transform.parent.GetComponent<AllRobotParts>();
-            }
+//            if (transform.parent) {
+//                parentRobot = transform.parent.GetComponent<AllRobotParts>();
+//            }
 
             audioSource = GetComponent<AudioSource>();
 //            touchable = GetComponent<Touchability>();
@@ -77,9 +77,8 @@ namespace behavior {
         }
 
         public void bePickedUp() {
-            var allRobotParts = transform.parent.GetComponent<AllRobotParts>();
-            if (allRobotParts != null) {
-                allRobotParts.addPart(this);
+            if (parentRobot) {
+                parentRobot.addPart(this);
             }
         }
     }
