@@ -10,24 +10,24 @@ namespace behavior {
 
         private AudioSource audioSource;
 
-        private Animator animator;
-        private Touchability touchable;
+        public Animator animator { private get; set; }
         private static readonly int DIE = Animator.StringToHash("die");
         private AllRobotParts parentRobot;
         private static readonly int WRONGLY_PICKED = Animator.StringToHash("wronglyPicked");
 
+        public Touchability touchability { private get; set; }
+
         private void Awake() {
-            animator = transform.parent.GetComponent<Animator>();
             if (transform.parent) {
                 parentRobot = transform.parent.GetComponent<AllRobotParts>();
             }
 
             audioSource = GetComponent<AudioSource>();
-            touchable = GetComponent<Touchability>();
-            if (! touchable)
-            {
-                touchable = transform.parent.GetComponent<Touchability>();
-            }
+//            touchable = GetComponent<Touchability>();
+//            if (! touchable)
+//            {
+//                touchable = transform.parent.GetComponent<Touchability>();
+//            }
         }
 
         // Start is called before the first frame update
@@ -46,10 +46,10 @@ namespace behavior {
         }
 
         public void lose(float hurtAmount) {
-            if (! touchable.Touchable) return;
+            if (! touchability.Touchable) return;
             
             audioSource.PlayOneShot(clips[Random.Range(0, clips.Count)]);
-            touchable.Hitted();
+            touchability.Hitted();
 
             life -= hurtAmount;
             if (life <= 0) {

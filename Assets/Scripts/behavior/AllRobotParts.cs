@@ -7,6 +7,19 @@ namespace behavior {
     public class AllRobotParts : MonoBehaviour {
         [SerializeField] private List<Life> myParts;
         [SerializeField] private GameEvent dieEvent;
+
+        private void Start() {
+            var touchable = GetComponent<Touchability>();
+
+            myParts.ForEach(part => {
+                part.touchability = touchable;
+                part.animator = part.transform.parent.GetComponent<Animator>();
+            });
+            GetComponent<Life>().touchability = touchable;
+            GetComponent<Life>().animator = GetComponent<Animator>();
+
+        }
+
         public float getMyWorth() {
             return myParts.Where(life => life.gameObject.activeSelf)
                 .Sum(lifePart => lifePart.getMyWorth());
