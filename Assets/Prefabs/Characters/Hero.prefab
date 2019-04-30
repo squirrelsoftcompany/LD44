@@ -5591,7 +5591,7 @@ ConfigurableJoint:
   m_Anchor: {x: -1.6, y: 1.2, z: -1.6}
   m_Axis: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.6000023, y: 1.2, z: -1.6000009}
+  m_ConnectedAnchor: {x: -1.6000004, y: 1.2, z: -1.5999985}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 0, z: 0}
   m_XMotion: 1
@@ -5973,7 +5973,7 @@ PrefabInstance:
     - target: {fileID: 1942146814951476847, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.2
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 1942146814951476847, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
@@ -6266,11 +6266,6 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorBySpeedModule.range.y
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
@@ -6622,11 +6617,6 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.range.y
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6638,8 +6628,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 8882674594b400742a55173f56e9759d,
         type: 3}
-    m_RemovedComponents:
-    - {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
 --- !u!114 &7769960856695629534 stripped
 MonoBehaviour:
@@ -6672,6 +6661,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4903448979782461096}
     m_Modifications:
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.4415021
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.9883423
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.0019636154
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.4707494
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -2.3258743
+      objectReference: {fileID: 0}
     - target: {fileID: 2165833295194261473, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Name
@@ -6983,11 +6997,6 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorBySpeedModule.range.y
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
@@ -7369,11 +7378,6 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.range.y
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7754,11 +7758,6 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.range.y
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8109,11 +8108,6 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.range.y
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8152,6 +8146,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4903448979782461096}
     m_Modifications:
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.096138
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.043223
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.3922522
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.29516602
+      objectReference: {fileID: 0}
     - target: {fileID: 2165833295194261473, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Name
@@ -8458,11 +8482,6 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorBySpeedModule.range.y
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
