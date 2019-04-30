@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f472b6226b4f4f34b473d7f393629e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtAmount: 20
+  hurtAmount: 5
 --- !u!54 &7056650305037636135
 Rigidbody:
   m_ObjectHideFlags: 0
