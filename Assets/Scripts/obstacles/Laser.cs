@@ -23,7 +23,7 @@ namespace obstacles {
 
             float distance = 1000;
             if (Physics.Raycast(ray, out var hit, 1000)) {
-                Life hitLife = hit.transform.GetComponent<Life>();
+                Life hitLife = hit.collider.gameObject.transform.GetComponent<Life>();
                 if (hitLife)
                 {
                     hitLife.lose(hurtAmount);
