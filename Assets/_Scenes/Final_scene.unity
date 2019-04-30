@@ -14070,10 +14070,10 @@ Transform:
   - {fileID: 163418517}
   - {fileID: 1049859817}
   - {fileID: 1239989686}
-  - {fileID: 1560927525}
-  - {fileID: 1011120608}
   - {fileID: 1456681326}
+  - {fileID: 1560927525}
   - {fileID: 1514871659}
+  - {fileID: 1011120608}
   - {fileID: 1955055887}
   - {fileID: 84153104}
   - {fileID: 869583947}
@@ -19561,16 +19561,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569058964671284819, guid: e5f57221f1760444a965dd3292947ac1,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.0000009536744
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569058964671284819, guid: e5f57221f1760444a965dd3292947ac1,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 1.1368684e-13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5f57221f1760444a965dd3292947ac1, type: 3}
