@@ -990,6 +990,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 42048590}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &44715964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7769960856695629534, guid: 66c1f378b120c1942ac917a51a23f2f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1293856590}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d82f03b48647e47b18f8de481b0e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &46045401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16520,11 +16532,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4822608802532873669, guid: 76ff13e4dccf2d843aabb3be95c13886,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 30.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76ff13e4dccf2d843aabb3be95c13886, type: 3}
 --- !u!4 &972227260 stripped
@@ -20269,6 +20276,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6647410206762628234, guid: e5f57221f1760444a965dd3292947ac1,
+        type: 3}
+      propertyPath: dependentOnPart
+      value: 
+      objectReference: {fileID: 1529874640}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5f57221f1760444a965dd3292947ac1, type: 3}
 --- !u!4 &1135226058 stripped
@@ -26154,6 +26166,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3702096221336965513, guid: 970d449325dfd6e43ac613ef60b30024,
+        type: 3}
+      propertyPath: dependentOnPart
+      value: 
+      objectReference: {fileID: 44715964}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 970d449325dfd6e43ac613ef60b30024, type: 3}
 --- !u!4 &1448017999 stripped
@@ -27287,6 +27304,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1514871658}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1529874640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1294452412262393282, guid: 66c1f378b120c1942ac917a51a23f2f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1293856590}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d82f03b48647e47b18f8de481b0e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1533113140
 PrefabInstance:
   m_ObjectHideFlags: 0
