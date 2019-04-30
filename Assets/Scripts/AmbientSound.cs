@@ -65,6 +65,8 @@ public class AmbientSound :
     // Update is called once per frame
     private void Update()
     {
+        if (! m_fenwick) return;
+
         float l_distanceFromFen = (m_fenwick.transform.position - this.transform.position).magnitude;
 
         if (l_distanceFromFen > m_maxDistance)
