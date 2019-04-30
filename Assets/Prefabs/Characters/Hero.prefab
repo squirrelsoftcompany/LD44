@@ -6267,6 +6267,11 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.range.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6617,6 +6622,11 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.range.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6628,7 +6638,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 8882674594b400742a55173f56e9759d,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
 --- !u!114 &7769960856695629534 stripped
 MonoBehaviour:
@@ -6997,6 +7008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorBySpeedModule.range.y
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
@@ -7378,6 +7394,11 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.range.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7758,6 +7779,11 @@ PrefabInstance:
       propertyPath: ColorBySpeedModule.range.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8107,6 +8133,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorBySpeedModule.range.y
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
@@ -8482,6 +8513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorBySpeedModule.range.y
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767163620510152021, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313748169082623764, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
