@@ -38,11 +38,6 @@ namespace behavior {
             changeLife.Raise();
         }
 
-        private void OnCollisionStay(Collision other) {
-            Hurtful hurtful = other.transform.GetComponent<Hurtful>();
-            if (hurtful) lose(hurtful.HurtAmount);
-        }
-
         public float getMyWorth() {
             return life * worthMultiplier;
         }
