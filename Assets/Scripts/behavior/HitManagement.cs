@@ -15,5 +15,10 @@ namespace behavior {
                 other.GetContact(0).thisCollider.GetComponent<Life>().lose(hurtful.HurtAmount);
             }
         }
+
+        private void Update()
+        {
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        }
     }
 }
