@@ -62,19 +62,11 @@ public class Conveyor :
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<Rigidbody>())
-        {
-            other.GetComponent<Rigidbody>().AddForce(-this.transform.right * m_speed, ForceMode.VelocityChange);
-        }
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<Rigidbody>())
         {
-            other.GetComponent<Rigidbody>().AddForce(-this.transform.right * m_speed, ForceMode.VelocityChange);
+            other.GetComponent<Rigidbody>().MovePosition(other.transform.position + (-transform.right) * m_speed);
         }
     }
     
