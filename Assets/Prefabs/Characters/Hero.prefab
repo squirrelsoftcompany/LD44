@@ -5285,7 +5285,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0.1
-  m_AngularDrag: 0.1
+  m_AngularDrag: 8
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -5304,7 +5304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_forceSpeed: 40
-  m_torqueSpeed: 100
+  m_torqueSpeed: 80
   m_MaxSpeed: 10
 --- !u!82 &1999153350
 AudioSource:
@@ -6220,11 +6220,6 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7310450391216918052, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
 --- !u!4 &1058170061367046499 stripped
@@ -6575,13 +6570,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 8882674594b400742a55173f56e9759d,
         type: 3}
-    - target: {fileID: 7310450391216918052, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
 --- !u!4 &425375757874263547 stripped
 Transform:
@@ -6949,6 +6938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
         type: 3}
+      propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
+        type: 3}
       propertyPath: m_Center.x
       value: 0.0019636154
       objectReference: {fileID: 0}
@@ -6961,16 +6955,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: -2.3258743
-      objectReference: {fileID: 0}
-    - target: {fileID: 5773062553361832452, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: m_Direction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310450391216918052, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
@@ -7352,11 +7336,6 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 3.03
       objectReference: {fileID: 0}
-    - target: {fileID: 7310450391216918052, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
 --- !u!4 &8910884162609145506 stripped
@@ -7737,11 +7716,6 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 2.44
       objectReference: {fileID: 0}
-    - target: {fileID: 7310450391216918052, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
 --- !u!114 &1294452412262393282 stripped
@@ -8100,11 +8074,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310450391216918052, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
@@ -8480,11 +8449,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 0.29516602
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310450391216918052, guid: 1eec911660b2f6d4090c2b506cc889d8,
-        type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eec911660b2f6d4090c2b506cc889d8, type: 3}
