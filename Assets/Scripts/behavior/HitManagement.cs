@@ -10,9 +10,10 @@ namespace behavior {
                 return;
 
             Hurtful hurtful = other.transform.GetComponent<Hurtful>();
-            if (hurtful)
+            Life part = other.GetContact(0).thisCollider.GetComponent<Life>();
+            if (hurtful && part)
             {
-                other.GetContact(0).thisCollider.GetComponent<Life>().lose(hurtful.HurtAmount);
+                part.lose(hurtful.HurtAmount);
             }
         }
 
