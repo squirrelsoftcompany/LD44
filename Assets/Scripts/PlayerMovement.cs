@@ -110,7 +110,11 @@ public class PlayerMovement :
         else // rotate
         {
             m_rb.AddTorque(transform.up * Mathf.Sign(angle) * m_torqueSpeed);
-            m_rb.velocity = new Vector3(0, 0, 0);
+
+            // reduce velocity
+            m_rb.velocity = new Vector3(m_rb.velocity.x - (m_rb.velocity.x * Time.fixedDeltaTime),
+                                        m_rb.velocity.y,
+                                        m_rb.velocity.z - (m_rb.velocity.z * Time.fixedDeltaTime));
         }
     }
 
