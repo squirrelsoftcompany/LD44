@@ -5220,6 +5220,7 @@ GameObject:
   - component: {fileID: 930779089430843743}
   - component: {fileID: 4470614314700907024}
   - component: {fileID: 8959638761271088023}
+  - component: {fileID: 7789238249182880733}
   m_Layer: 9
   m_Name: Hero
   m_TagString: Player
@@ -5527,6 +5528,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d91e8c6ba66cdd4f85e2b18b07f7f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &7789238249182880733
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272440476593738857}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.1, y: 1.5, z: 1.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8239288269233820859
 GameObject:
   m_ObjectHideFlags: 0
